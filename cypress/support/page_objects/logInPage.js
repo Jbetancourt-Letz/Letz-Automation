@@ -37,7 +37,7 @@ class LogIn {
     }
 
     createNewAccount() {
-        cy.get(this.createAccount).click();
+        cy.contains('a', 'Create').click();
     }
 
 }

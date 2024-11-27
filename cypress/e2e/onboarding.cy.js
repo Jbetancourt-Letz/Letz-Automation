@@ -24,10 +24,6 @@ describe('Sign up and Onboarding Flow ', () => {
             
         });
     
-        it('User is able to upload an Image', () => {
-            signUpPage.uploadProfileImage();
-        });
-    
         it('User creates a valid password', () => {
             signUpPage.createsValidPassword();
         });
@@ -42,12 +38,26 @@ describe('Sign up and Onboarding Flow ', () => {
             onboardingPage.validatesFirstLandingObjects();
         });
 
-        it('User is able to select a Nickname', () => {
-            onboardingPage.nicknameStep();
-        });
-
         it('User is able to select an Avatar', () => {
             onboardingPage.avatarStep();
+            onboardingPage.validateAndSelectRandomAvatar();
+        });
+
+        it('User is able to select a purpose for learning English', () => {
+            onboardingPage.selectRandomPurpose();
+            onboardingPage.validateProfileCreation();
+        });
+
+        it('User should be able to select their English Level', () => {
+            onboardingPage.englishLevelSelection();
+        });
+
+        it('User should be able to select Industry', () => {
+            onboardingPage.selectRandomIndustry();
+        });
+
+        it('User is abale to complete the onboartding and is redirected to app', () => {
+            onboardingPage.lastStepValidation();
         });
     })
     
